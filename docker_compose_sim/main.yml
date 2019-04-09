@@ -6,5 +6,5 @@
     - name: temp
       template: 
         src: template_dict.yml
-        dest: /home/sinfiej/temp/template.yml
+        dest: ~/template.yml
 

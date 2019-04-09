@@ -9,7 +9,7 @@
     - name: temp
       copy: 
         content: "{{ item.content }}"
-        dest: "/home/sinfiej/temp/{{ item.name }}"
+        dest: "~/{{ item.name }}"
         force: no
       loop: "{{ list }}"
       

@@ -5,6 +5,6 @@
     - name: temp
       copy: 
         content: ""
-        dest: /home/sinfiej/temp/test
+        dest: ~/test
         force: no
 

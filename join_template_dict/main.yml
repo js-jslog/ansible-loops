@@ -13,5 +13,5 @@
     - name: temp
       template: 
         src: template.yml
-        dest: /home/sinfiej/temp/template.yml
+        dest: ~/template.yml
 

@@ -5,7 +5,7 @@
     - name: temp
       copy: 
         content: "{{ item.content }}"
-        dest: "/home/sinfiej/temp/{{ item.name }}"
+        dest: "~/{{ item.name }}"
         force: no
       loop:
         - { name: test1, content: test1content }
