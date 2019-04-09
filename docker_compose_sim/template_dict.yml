@@ -1,0 +1,30 @@
+version: '3.3'
+services:
+
+{% for  env in environments %}
+    {{ env.environment_name}} :
+        build:
+            context: ./node
+            args:
+                - NODE_ENV=development
+                - NODE_VERSION=10.15.1
+                - PROJECT_PATH=/opt/app/
+                - YARN=false
+                - http_proxy=http://websensegateway:8080
+                - https_proxy=http://websensegateway:8080
+                - HTTP_PROXY=http://websensegateway:8080
+                - HTTPS_PROXY=http://websensegateway:8080
+        volumes:
+            - ../../{{ env.environment_name }}/{{ env.client_name }}/:/opt/app
+            - ../../{{ env.environment_name }}/rsl_dependencies:/opt/rsl_dependencies
+        entrypoint: run-nodock "npx mr-server dev && tail -f /dev/null"
+        ports:
+            - "3000:3000"
+            - "9229:9229"
+            - "9230:9230"
+            - "9231:9231"
+            - "9232:9232"
+        tty: true
+
+{% endfor %}
+

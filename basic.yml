@@ -1,0 +1,10 @@
+- name: temp
+  hosts: localhost
+  tasks:
+
+    - name: temp
+      copy: 
+        content: ""
+        dest: /home/sinfiej/temp/test
+        force: no
+

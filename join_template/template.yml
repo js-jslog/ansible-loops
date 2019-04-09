@@ -1,0 +1,6 @@
+tempalte file
+  - variables
+
+    this is the first variable: {{ list | min }}
+
+    these are out variables ({{ list | join("|") }}), end

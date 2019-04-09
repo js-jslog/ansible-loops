@@ -1,0 +1,4 @@
+environments:
+  - uutl_devt:
+    environment_name: uutl_devt
+    client_name: uutl

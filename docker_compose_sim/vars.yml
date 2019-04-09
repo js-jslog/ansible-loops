@@ -1,0 +1,3 @@
+list:
+  - { environment_name: uutl_devt, client_name: uutl }
+  - { environment_name: swtn_devt, client_name: swtn }

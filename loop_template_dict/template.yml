@@ -1,0 +1,6 @@
+tempalte file
+  - variables
+{% for  var in list %}
+      "{{ var.name }}: {{ var.content }}"
+      var_extra: extra
+{% endfor %}

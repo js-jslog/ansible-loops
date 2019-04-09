@@ -1,0 +1,13 @@
+- name: temp
+  hosts: localhost
+  tasks:
+
+    - name: temp
+      copy: 
+        content: "{{ item.content }}"
+        dest: "/home/sinfiej/temp/{{ item.name }}"
+        force: no
+      loop:
+        - { name: test1, content: test1content }
+        - { name: test2, content: test2content }
+

@@ -1,0 +1,6 @@
+tempalte file
+  - variables
+
+    this is the first variable: {{ list | map(attribute="name") | min }}
+
+    This is a list of them all, ({{ list | map(attribute="name") | join("|") }}), end

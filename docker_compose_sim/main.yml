@@ -1,0 +1,10 @@
+- name: temp
+  hosts: localhost
+  vars_files:
+    - dict.yml
+  tasks:
+    - name: temp
+      template: 
+        src: template_dict.yml
+        dest: /home/sinfiej/temp/template.yml
+

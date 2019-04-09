@@ -1,0 +1,15 @@
+- name: temp
+  hosts: localhost
+  vars:
+    list:
+      - name: test1
+        content: test1content
+      - name: test2
+        content: test2content
+
+  tasks:
+    - name: temp
+      template: 
+        src: template.yml
+        dest: /home/sinfiej/temp/template.yml
+

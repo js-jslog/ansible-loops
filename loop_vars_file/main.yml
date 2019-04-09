@@ -1,0 +1,14 @@
+- name: temp
+  hosts: localhost
+  vars_files:
+    - list.yml
+  tasks:
+    - name: temp
+      copy: 
+        content: "{{ item.content }}"
+        dest: "/home/sinfiej/temp/{{ item.name }}"
+        force: no
+      loop: "{{ list }}"
+      
+
+
