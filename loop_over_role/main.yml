@@ -1,0 +1,13 @@
+- name: loop over role playbook
+  hosts: localhost
+  tasks:
+
+    - name: loop over role task
+      include_role:
+        name: myrole
+      with_items:
+        - "test1"
+        - "test2"
+      vars:
+        thing: "{{ item }}"
+
