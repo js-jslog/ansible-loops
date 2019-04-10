@@ -1,0 +1,11 @@
+- name: include iteration vars
+  include_vars:
+    file: "{{ thing.import_file }}"
+    name: import_file
+
+- name: role task
+  copy: 
+    content: "{{ import_file.testvar }}"
+    dest: ~/{{ thing.name }}
+    force: no
+

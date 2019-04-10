@@ -1,0 +1,7 @@
+list:
+  - name: test1
+    content: test1content
+    import_file: test1vars.yml
+  - name: test2
+    content: test2content
+    import_file: test2vars.yml
