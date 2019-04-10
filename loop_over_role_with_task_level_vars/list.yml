@@ -1,7 +1,10 @@
 list:
   - name: test1
     content: test1content
-    import_file: test1vars.yml
+    import_files:
+      - test1vars.yml
+      - test1avars.yml
   - name: test2
     content: test2content
-    import_file: test2vars.yml
+    import_files:
+      - test2vars.yml

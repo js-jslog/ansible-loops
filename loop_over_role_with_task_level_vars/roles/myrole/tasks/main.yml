@@ -1,11 +1,11 @@
 - name: include iteration vars
   include_vars:
-    file: "{{ thing.import_file }}"
-    name: import_file
+    file: "{{ item }}"
+  with_items: "{{ thing.import_files }}"
 
 - name: role task
   copy: 
-    content: "{{ import_file.testvar }}"
+    content: "{{ testvar }}, {{ testvaranother }}"
     dest: ~/{{ thing.name }}
     force: no
 
