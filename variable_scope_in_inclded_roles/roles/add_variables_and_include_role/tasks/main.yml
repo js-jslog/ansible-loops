@@ -3,9 +3,7 @@
     file: "{{ item }}"
   with_items: "{{ var_files }}"
 
-- name: role task
-  copy: 
-    content: "{{ contentvar }}"
-    dest: ~/{{ namevar }}
-    force: no
+- name: include role task
+  include_role:
+    name: create_file
 
