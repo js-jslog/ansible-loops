@@ -1,0 +1,11 @@
+- name: playbook
+  hosts: localhost
+  tasks:
+
+    - name: call outer role
+      include_role:
+        name: add_variables_and_include_role
+      vars:
+        var_files:
+          - vars1.yml
+          - vars2.yml
