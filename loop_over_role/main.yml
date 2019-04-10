@@ -1,12 +1,14 @@
 - name: loop over role playbook
   hosts: localhost
+  vars_files:
+    - list.yml
   tasks:
 
     - name: loop over role task
       include_role:
         name: myrole
       with_items:
-        - test
+        - "{{ list }}"
       loop_control:
         loop_var: thing
 

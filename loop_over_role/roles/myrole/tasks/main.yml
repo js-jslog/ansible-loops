@@ -1,6 +1,6 @@
 - name: role task
   copy: 
-    content: ""
-    dest: ~/{{ thing }}
+    content: "{{ thing.content }}"
+    dest: ~/{{ thing.name }}
     force: no
 

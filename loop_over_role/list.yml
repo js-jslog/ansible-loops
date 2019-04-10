@@ -1,3 +1,5 @@
 list:
-  - { name: test1, content: test1content }
-  - { name: test2, content: test2content }
+  - name: test1
+    content: test1content
+  - name: test2
+    content: test2content
