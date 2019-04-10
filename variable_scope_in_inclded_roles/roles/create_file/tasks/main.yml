@@ -1,6 +1,6 @@
 - name: role task
   copy: 
-    content: "{{ contentvar }}"
+    content: "{{ contentvar }}, {{ default_var }}"
     dest: ~/{{ namevar }}
     force: no
 

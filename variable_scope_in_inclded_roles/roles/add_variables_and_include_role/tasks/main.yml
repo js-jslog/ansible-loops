@@ -1,7 +1,15 @@
+- name: default var is currently undefined
+  debug:
+    msg: "{{ default_var }}"
+
 - name: include iteration vars
   include_vars:
     file: "{{ item }}"
   with_items: "{{ var_files }}"
+
+- name: default var now has the content of the included var file
+  debug:
+    msg: "{{ default_var }}"
 
 - name: include role task
   include_role:
